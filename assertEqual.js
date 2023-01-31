@@ -65,6 +65,8 @@ Comparing identical numbers
 Comparing non-identical numbers
 */
 
+
+/*
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -74,6 +76,24 @@ const assertEqual = function(actual, expected) {
 };
 
 // TEST CODE
+assertEqual("hello", "hello");
+assertEqual("hello", "world");
+assertEqual(5, 5);
+assertEqual(5, 10);
+
+*/
+
+// here i am improving assertEqual function using the + operator to concatenate values together for console.log, it would look like this:
+
+
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log("✅ Assertion Passed: " + actual + " === " + expected);
+  } else {
+    console.log("❌ Assertion Failed: " + actual + " !== " + expected);
+  }
+};
+
 assertEqual("hello", "hello");
 assertEqual("hello", "world");
 assertEqual(5, 5);
