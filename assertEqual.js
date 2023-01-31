@@ -36,7 +36,7 @@ const assertEqual = function(actual, expected) {
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
   
-*/
+
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
@@ -54,3 +54,27 @@ assertEqual(2, 2);
 assertEqual(4, 4);
 assertEqual(10, 1);
 assertEqual(-1, 1);
+
+*/
+
+/*Test at least the following scenarios:
+
+Comparing identical strings
+Comparing non-identical strings
+Comparing identical numbers
+Comparing non-identical numbers
+*/
+
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
+// TEST CODE
+assertEqual("hello", "hello");
+assertEqual("hello", "world");
+assertEqual(5, 5);
+assertEqual(5, 10);
