@@ -19,7 +19,7 @@ const sumBuggy = function(a, b) {
 // TEST CODE
 console.assert(sumBuggy(1, 2) === 3); // fails, because bug! The expected output should be 3 but it returns 2 instead. This is because the function is multiplying a and b instead of adding them.
 
-*/
+
 
 
 
@@ -36,4 +36,21 @@ const assertEqual = function(actual, expected) {
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
   
-  
+*/
+
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
+// TEST more code with Emojis
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual(1, 1);
+assertEqual(1, 3);
+assertEqual(2, 2);
+assertEqual(4, 4);
+assertEqual(10, 1);
+assertEqual(-1, 1);
