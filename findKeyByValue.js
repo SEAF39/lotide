@@ -1,37 +1,38 @@
-// Define an assertEqual function that compares if two values are equal
-// and logs the result to the console
+// assertEqual function to compare actual and expected values
 const assertEqual = function(actual, expected) {
-  // If the values are equal
+  // check if actual and expected are equal
   if (actual === expected) {
-    // Log a message indicating the test passed
+    // log success message if equal
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    // Log a message indicating the test failed
+    // log error message if not equal
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
-// Define a findKeyByValue function that takes an object and a value as input
+// findKeyByValue function to find the key with a certain value in an object
 const findKeyByValue = function(obj, value) {
-  // Loop over all the keys of the object
-  for (let key of Object.keys(obj)) {
-    // If the value of the current key in the object matches the input value
+  // get the keys of the object using Object.keys
+  let keys = Object.keys(obj);
+
+  // loop over the keys
+  for (const key of keys) {
+    // check if the value of the key matches the input value
     if (obj[key] === value) {
-      // Return the current key
+      // return the key if found
       return key;
     }
   }
-  // If no key with the matching value is found, return undefined
+  // return undefined if not found
   return undefined;
 };
 
-// Define an example object
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire"
 };
 
-// Test the findKeyByValue function using the assertEqual function
+// test cases for the findKeyByValue function
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
