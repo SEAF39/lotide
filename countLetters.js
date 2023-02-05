@@ -1,33 +1,44 @@
+// Define a function to compare actual and expected values
 const assertEqual = function(actual, expected) {
+  // Check if the actual value is equal to the expected value
   if (actual === expected) {
-    console.log("✅ Assertion Passed: " + actual + " === " + expected);
+    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log("❌ Assertion Failed: " + actual + " !== " + expected);
+    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
+// Define the function countLetters to count the number of each letter in a sentence
 const countLetters = function(sentence) {
-  // create an empty object to store the counts of each letter
+  // Convert the sentence to lowercase to ignore case sensitivity
+  sentence = sentence.toLowerCase();
+  // Initialize an empty object to store the letter counts
   const letterCounts = {};
-
-  // loop through each letter in the sentence
+  // Loop through each letter in the sentence
   for (const letter of sentence) {
-    // if the letter is not a space, add it to the letterCounts object
-    if (letter !== ' ') {
-      // if the letter is already a key in the object, increment its value
+    // Check if the letter is a space
+    if (letter !== " ") {
+      // If the letter is not a space, add it to the letterCounts object or increment its count
       if (letterCounts[letter]) {
         letterCounts[letter] += 1;
       } else {
-        // if the letter is not already a key in the object, add it with a value of 1
         letterCounts[letter] = 1;
       }
     }
   }
-
-  // return the letterCounts object
+  // Return the letterCounts object
   return letterCounts;
 };
 
-// test the function with a few test cases
-console.log(countLetters("hello"));
-console.log(countLetters("lighthouse in the house"));
+// Test the function countLetters with an example sentence
+const result = countLetters("lighthouse in the house");
+// Use the assertEqual function to compare the result with the expected output
+assertEqual(result["l"], 1);
+assertEqual(result["i"], 2);
+assertEqual(result["g"], 1);
+assertEqual(result["h"], 4);
+assertEqual(result["t"], 2);
+assertEqual(result["o"], 2);
+assertEqual(result["u"], 2);
+assertEqual(result["s"], 2);
+assertEqual(result["e"], 3);
