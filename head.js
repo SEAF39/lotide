@@ -41,12 +41,18 @@ Finally, four test cases are run to test the head function using the assertEqual
 
 */
 
+//refactoring the code based on Lotide Refactor Example - AssertEqual imported. 
+const assertEqual = require('./assertEqual.js');
+
+
 const head = function(array) {
   if (array.length === 0) {
     return undefined;
   }
   return array[0];
 };
+
+/* we going to read the head.js function from the previous exercise AssertEqual function.
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
@@ -56,7 +62,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+*/
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 assertEqual(head([5]), 5);
 assertEqual(head([]), undefined);
+assertEqual(head([110,120,150,160]), 11);
+assertEqual(head([110,200,300]), 110);
+assertEqual(head([110,200,300]), 400);
