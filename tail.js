@@ -25,6 +25,11 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 
 */
 
+//refactoring the code based on Lotide Refactor Example - AssertEqual imported. 
+const assertEqual = require('./assertEqual.js');
+
+
+/* we going to read previous exercise AssertEqual function.
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log("✅ Assertion Passed: " + actual + " === " + expected);
@@ -32,6 +37,7 @@ const assertEqual = function(actual, expected) {
     console.log("❌ Assertion Failed: " + actual + " !== " + expected);
   }
 };
+*/
 
 const tail = function(array) {
   return array.slice(1);
@@ -56,3 +62,5 @@ assertEqual(tail(singleElementArray).length, 0);
 assertEqual(tail([]).length, 0);
 
 
+// refactoring the code based on Lotide Refactor Example
+module.exports = tail;
