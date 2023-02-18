@@ -1,16 +1,8 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
+//refactoring the code based on Lotide Refactor Example - AssertEqual imported. 
+const assertArraysEqual = require('./assertEqual.js');
 
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
 
-  return true;
-};
+/* we going to read the assertEqual.js file from the previous exercise AssertEqual function.
 
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
@@ -19,7 +11,7 @@ const assertArraysEqual = function(actual, expected) {
     console.log("The arrays are not equal.");
   }
 };
-
+*/
 const middle = function(array) {
   if (array.length <= 2) {
     return [];
@@ -47,8 +39,14 @@ assertArraysEqual(middle([1, 2, 3]), [2]);
 assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
 // Output: The arrays are equal.
 
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-// Output: The arrays are equal.
+assertArraysEqual(middle([1, 2, 3, 4]), [22, 33]);
+// Output: The arrays are  not equal.
 
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-// Output: The arrays are equal.
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [9, 12]);
+// Output: The arrays are  not equal.
+
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [7, 9]);
+// Output: The arrays are  not equal.
+
+// refactoring the code based on Lotide Refactor Example
+module.exports = middle;
