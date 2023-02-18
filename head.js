@@ -70,3 +70,6 @@ assertEqual(head([]), undefined);
 assertEqual(head([110,120,150,160]), 11);
 assertEqual(head([110,200,300]), 110);
 assertEqual(head([110,200,300]), 400);
+
+// refactoring the code based on Lotide Refactor Example
+module.exports = head;
