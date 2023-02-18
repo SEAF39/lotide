@@ -16,6 +16,7 @@ const findKeyByValue = require('./findKeyByValue');
 const eqObjects = require('./eqObjects');
 const assertObjectsEqual = require('./assertObjectsEqual');
 
+// exports all functions
 
 module.exports = {
   head,
