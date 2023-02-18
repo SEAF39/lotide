@@ -1,3 +1,7 @@
+
+//refactoring the code based on Lotide Refactor Example - AssertEqual imported. 
+const assertArraysEqual = require('./assertEqual.js');
+
 const eqArrays = function(arr1, arr2) {
   // Check if the length of the two arrays is equal
   if (arr1.length !== arr2.length) {
@@ -19,6 +23,10 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
+
+/*   we going to read the assertEqual.js file from the previous exercise AssertEqual function.
+
+
 const assertArraysEqual = function(arr1, arr2) {
   // Check if the two arrays are equal using the eqArrays function
   if (eqArrays(arr1, arr2)) {
@@ -28,7 +36,11 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
+*/
 // Call the function to test
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
 assertArraysEqual([1, 2, 3], [3, 2, 1]);
 assertArraysEqual(["a", "b", "c"], ["a", "b", "c"]);
+
+// refactoring the code based on Lotide Refactor Example
+module.exports = assertArraysEqual;
