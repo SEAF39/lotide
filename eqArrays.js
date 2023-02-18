@@ -1,4 +1,11 @@
 
+
+//refactoring the code based on Lotide Refactor Example - AssertEqual imported. 
+const assertEqual = require('./assertEqual.js');
+
+
+/*  we going to read the head.js function from the previous exercise AssertEqual function.
+
 const assertEqual = function(actual, expected) {
   // Check if the actual value matches the expected value
   if (actual === expected) {
@@ -7,6 +14,8 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !=== ${expected}`);
   }
 };
+
+*/
 
 const eqArrays = function(arrayOne, arrayTwo) {
   // Check if the lengths of the arrays are not equal, return false
@@ -43,3 +52,7 @@ assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true)
 
 eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false)
+
+
+// refactoring the code based on Lotide Refactor Example
+module.exports = assertEqual;
