@@ -96,5 +96,11 @@ const assertEqual = function(actual, expected) {
 
 assertEqual("hello", "hello");
 assertEqual("hello", "world");
+assertEqual("Seaf","ROSHI");
 assertEqual(5, 5);
 assertEqual(5, 10);
+assertEqual(120, 120);
+assertEqual("Seaf","Seaf");
+
+// refactoring the code based on Lotide Refactor Example
+module.exports = assertEqual;
