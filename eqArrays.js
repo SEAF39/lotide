@@ -4,7 +4,7 @@
 const assertEqual = require('./assertEqual.js');
 
 
-/*  we going to read the head.js function from the previous exercise AssertEqual function.
+/*  we going to read the assertEqual.js file from the previous exercise AssertEqual function.
 
 const assertEqual = function(actual, expected) {
   // Check if the actual value matches the expected value
