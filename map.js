@@ -18,17 +18,16 @@ const map = (array, callback) => {
 // It checks if the length of both arrays is equal, if not it returns false
 // It then iterates through both arrays and compares each element, if they are not equal it returns false
 // If both arrays have equal length and all elements are equal, it returns true
+
 const eqArrays = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
     return false;
   }
-
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
-      return false;
+    return false;
     }
   }
-
   return true;
 };
 
@@ -36,13 +35,14 @@ const eqArrays = (arr1, arr2) => {
 // It uses eqArrays to compare the two parameters
 // If they are equal, it logs a message to the console indicating the test passed
 // If they are not equal, it logs a message to the console indicating the test failed
-const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
+const assertArraysEqual = function(array1, array2) {
+  const inspect = require('util').inspect; 
+  if (eqArrays(array1, array2))
+    console.log(`✅✅✅✅ The following: Assertion Passed: ${inspect(array1)} === ${inspect(array2)}`);
+  else
+    console.log(`🛑🛑🛑🛑 The following: Assertion Failed: ${inspect(array1)} !== ${inspect(array2)}`);
 };
+
 
 // Example arrays for testing the map function
 const words = ["ground", "control", "to", "major", "tom"];
@@ -59,4 +59,5 @@ assertArraysEqual(results2, [2, 4, 6, 8]);
 
 // Test 3: Using the map function to return the length of each string in the `strings` array
 const results3 = map(strings, string => string.length);
-assertArraysEqual(results3, [5, 5, 4, 2, 1, 4]);
+assertArraysEqual(results3, [5, 5, 4, 2, 1, 10]);
+
