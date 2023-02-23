@@ -1,46 +1,12 @@
+const eqArrays = require('./eqArrays');
 
-//refactoring the code based on Lotide Refactor Example - AssertEqual imported. 
-const assertArraysEqual = require('./assertEqual.js');
 
-const eqArrays = function(arr1, arr2) {
-  // Check if the length of the two arrays is equal
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  
-  // Loop through each element of the arrays
-  for (let i = 0; i < arr1.length; i++) {
-    // Check if the elements are arrays, and if so, call the eqArrays function again for nested arrays
-    if (Array.isArray(arr1[i]) && !eqArrays(arr1[i], arr2[i])) {
-      return false;
-    }
-    // Check if the elements are not arrays and if they are not equal
-    if (!Array.isArray(arr1[i]) && arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  // Return true if all elements are equal
-  return true;
+const assertArraysEqual = function(array1, array2) {
+  const inspect = require('util').inspect; 
+  if (eqArrays(array1, array2))
+    console.log(`✅✅✅✅ The following: Assertion Passed: ${inspect(array1)} === ${inspect(array2)}`);
+  else
+    console.log(`🛑🛑🛑🛑 The following: Assertion Failed: ${inspect(array1)} !== ${inspect(array2)}`);
 };
-
-
-/*   we going to read the assertEqual.js file from the previous exercise AssertEqual function.
-
-
-const assertArraysEqual = function(arr1, arr2) {
-  // Check if the two arrays are equal using the eqArrays function
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅ Arrays are equal: [${arr1}] === [${arr2}]`);
-  } else {
-    console.log(`🛑🛑🛑 Arrays are not equal: [${arr1}] !== [${arr2}]`);
-  }
-};
-
-*/
-// Call the function to test
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [3, 2, 1]);
-assertArraysEqual(["a", "b", "c"], ["a", "b", "c"]);
-
-// refactoring the code based on Lotide Refactor Example
 module.exports = assertArraysEqual;
+
