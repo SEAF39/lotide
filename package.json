@@ -1,7 +1,7 @@
 {
-  "name": "@seaf39/lotide",
-  "version": "1.0.1",
-  "description": "Incorporate Mocha and Chai - Lotide assignment ",
+  "name": "lotide",
+  "version": "1.0.2",
+  "description": "Lotide Project - Updated to version 1.0.2",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
