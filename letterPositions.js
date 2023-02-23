@@ -21,7 +21,6 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return true 
 };
 
-
 // Function to compare two arrays and log a message indicating if the assertion passed or failed
 
 const assertArraysEqual = function(array1, array2) {
@@ -33,15 +32,12 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-
-
 // Function to return an object with the positions of letters in a sentence
 // Remove spaces from the sentence
 // Loop through the sentence
 // If the letter already exists in the results object, push the index to the corresponding array
 // If the letter does not exist in the results object, create a new key-value pair with the letter as the key and the index as the value in an array
 // Return the results object
-
 
 const letterPositions = function(sentence) {
   let results = {};
@@ -55,7 +51,6 @@ const letterPositions = function(sentence) {
   }
   return results;
 };
-
 
 //Test Cases
 assertArraysEqual(letterPositions("hello").e, [1]);
