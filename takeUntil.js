@@ -9,7 +9,6 @@
 // If the callback returns a truthy value, break the loop
 // Return the result array
 
-
 const takeUntil = function(array, callback) {
   let result = [];
   for (let element of array) {
@@ -43,9 +42,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return true 
 };
 
-
 // Function to check if two arrays are equal and log the result
-
 // Function to compare two arrays and log a message indicating if the assertion passed or failed
 
 const assertArraysEqual = function(array1, array2) {
