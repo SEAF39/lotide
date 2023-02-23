@@ -1,8 +1,8 @@
 {
   "name": "@seaf39/lotide",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lotied Project version 1.0.2",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },

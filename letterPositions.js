@@ -41,8 +41,11 @@ const assertArraysEqual = function(array1, array2) {
 
 const letterPositions = function(sentence) {
   let results = {};
-  sentence = sentence.split(" ").join("");  
+  sentence = sentence.split("");
   for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i]== " "){
+      continue;
+    }
     if (results[sentence[i]]) {
       results[sentence[i]].push(i);
     } else {
