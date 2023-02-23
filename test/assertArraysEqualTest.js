@@ -1,6 +1,12 @@
-// read the test from assertArraysEqual.js file
-const assertArraysEqual = require('../assertArraysEqual.js');
+const assert = require('chai').assert;
+// TEST CODE
+describe("#assertArraysEqual", () => {
+  it("should returns true for [1, 2, 3], [1, 2, 3]", () => {
+    assert.deepEqual([1, 2, 3], [1, 2, 3]);
+  });
 
+  it("should returns 'true' for ([1, 2, 4, 3], [1, 2, 4, 3])", () => {
+    assert.deepEqual([1, 2, 4, 3], [1, 2, 4, 3]); 
+  });
 
-// refactoring the code based on Lotide Refactor Example
-module.exports = assertArraysEqual;
+});
