@@ -1,7 +1,12 @@
+const assert = require('chai').assert;
+// TEST CODE
+describe("#assertEqual", () => {
+  it("should returns true for Lighthouse Labs Bootcamp", () => {
+    assert.strictEqual("Lighthouse Labs Bootcamp", "Lighthouse Labs Bootcamp");
+  });
 
-// read the test file from assertEquals function
-const assertEqual = require('../assertEqual');
+  it("should returns true for (1, 1)", () => {
+    assert.strictEqual(1, 1);
+  });
 
-
-// refactoring the code based on Lotide Refactor Example
-module.exports = assertEqual;
+});
