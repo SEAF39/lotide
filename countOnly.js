@@ -1,7 +1,5 @@
 // FUNCTION IMPLEMENTATION
 
-// assertEqual function to test the output of the countOnly function
-
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log("✅✅✅✅ The following: Assertion Passed: " + actual + " === " + expected);
@@ -9,14 +7,6 @@ const assertEqual = function(actual, expected) {
     console.log("🛑🛑🛑🛑 The following: Assertion Failed: " + actual + " !== " + expected);
   }
 };
-
-// All Items: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
-// loop over all the items in the array
-// check if the item should be counted according to itemsToCount
-// if the item is already in the results object, increment its count
-// if the item is not in the results object, add it and set its count to 1
-// return the results object
   
 const countOnly = function(allItems, itemsToCount) {
   const results = {};

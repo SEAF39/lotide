@@ -1,10 +1,5 @@
 
-// create a new array to store the elements not present in itemsToRemove
-// loop through the source array
-// check if the current element is not present in itemsToRemove
-// return the newArray
-// if it's not, add it to the newArray
-      
+// Create a new array to store the elements not present in itemsToRemove      
 const without = function(source, itemsToRemove) {
   let newArray = [];  
   for (let i = 0; i < source.length; i++) {
@@ -14,12 +9,6 @@ const without = function(source, itemsToRemove) {
   }
   return newArray;
 };
-
-// Check if the lengths of the arrays are not equal, return false
-// Iterate through each element in the arrays
-// Check if both elements are arrays and if eqArrays returns false
-// Check if the elements are not arrays and if they are not equal
-// Return true if all elements match
 
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length  !== arrayTwo.length) {
@@ -36,10 +25,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return true 
 };
 
-// check if the length of the arrays are equal
-// loop through the arrays to check if each element is equal
-// if the arrays are equal, print success message
-    
+// Check if the length of the arrays are equal
 const assertArraysEqual = function(actual, expected) {
   if (actual.length !== expected.length) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);

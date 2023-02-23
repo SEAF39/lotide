@@ -1,11 +1,4 @@
-
-// Implement Map - Excersie 
-// Module 1 - Week2
-
 // This function takes an array and a callback function as parameters
-// It iterates through the array and applies the callback function to each element in the array
-// It then pushes the result of each callback function to a new array, `results`
-// It returns the `results` array
 const map = (array, callback) => {
   const results = [];
   for (let item of array) {
@@ -15,10 +8,6 @@ const map = (array, callback) => {
 };
 
 // This function takes two arrays as parameters
-// It checks if the length of both arrays is equal, if not it returns false
-// It then iterates through both arrays and compares each element, if they are not equal it returns false
-// If both arrays have equal length and all elements are equal, it returns true
-
 const eqArrays = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
     return false;
@@ -32,9 +21,6 @@ const eqArrays = (arr1, arr2) => {
 };
 
 // This function takes two parameters, `actual` and `expected`
-// It uses eqArrays to compare the two parameters
-// If they are equal, it logs a message to the console indicating the test passed
-// If they are not equal, it logs a message to the console indicating the test failed
 const assertArraysEqual = function(array1, array2) {
   const inspect = require('util').inspect; 
   if (eqArrays(array1, array2))
@@ -42,7 +28,6 @@ const assertArraysEqual = function(array1, array2) {
   else
     console.log(`🛑🛑🛑🛑 The following: Assertion Failed: ${inspect(array1)} !== ${inspect(array2)}`);
 };
-
 
 // Example arrays for testing the map function
 const words = ["ground", "control", "to", "major", "tom"];

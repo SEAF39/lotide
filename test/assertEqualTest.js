@@ -1,4 +1,5 @@
 const assert = require('chai').assert;
+
 // TEST CODE
 describe("#assertEqual", () => {
   it("should returns true for Lighthouse Labs Bootcamp", () => {

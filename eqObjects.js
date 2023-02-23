@@ -1,7 +1,6 @@
 // FUNCTION IMPLEMENTATION
 
 // Compare the actual and expected values, and log a message to the console indicating whether they are equal or not
-
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log("✅✅✅✅ The following: Assertion Passed: " + actual + " === " + expected);
@@ -10,10 +9,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Check if the lengths of both arrays are equal
-// Loop through each element of both arrays and compare them
-// If all elements are equal, return true
-    
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -27,13 +22,6 @@ const eqArrays = function(array1, array2) {
 };
 
 // Get the keys of both objects
-// If the lengths of the keys are not equal, return false
-// Loop through each key of the first object
-// If the second object does not have the key, return false
-// If the value of the key is an array, use eqArrays to compare the arrays
-// If the value of the key is not an array, compare the values using ===
-// If all checks have passed, return true
-
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);

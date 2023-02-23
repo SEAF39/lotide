@@ -1,7 +1,6 @@
 // FUNCTION IMPLEMENTATION
 
 // Compare the actual and expected values, and log a message to the console indicating whether they are equal or not
-
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log("✅✅✅✅ The following: Assertion Passed: " + actual + " === " + expected);
@@ -12,9 +11,6 @@ const assertEqual = function(actual, expected) {
 
 // loop over the keys of the object
 // if the callback returns a truthy value when passed the value of the current key
-// return the key
-// if no key is found, return undefined
-
 const findKey = function(obj, callback) {
   for (let key in obj) {
     if (callback(obj[key])) {

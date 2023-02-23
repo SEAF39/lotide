@@ -1,10 +1,6 @@
 // Function IMPLEMENTATION
 
 // Define a function that takes two objects as arguments
-// require the 'inspect' function from the 'util' module and assign it to a variable
-// if the objects are equal, log a success message with the actual and expected objects
-// if the objects are not equal, log a failure message with the actual and expected objects
-    
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
@@ -15,8 +11,6 @@ const assertObjectsEqual = function(actual, expected) {
 };
 
 // Check if the length of both arrays is equal
-// Loop through each element and check if it is equal in both arrays
-  
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -31,8 +25,6 @@ const eqArrays = function(array1, array2) {
 
 
 // Get the keys of both objects and check if the length is equal
-// Loop through each key and check if the value is equal in both objects
-
 const eqObjects = function(object1, object2) {
   
   const keys1 = Object.keys(object1);

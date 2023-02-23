@@ -1,14 +1,4 @@
-
-// Implement takeUntil Lotide Challenge
-// Module 1 - Week2
-
 // The main function to implement takeUntil
-// Initialize an empty array to store the result
-// Loop through the given array
-// If the callback returns a falsy value, add the element to the result array
-// If the callback returns a truthy value, break the loop
-// Return the result array
-
 const takeUntil = function(array, callback) {
   let result = [];
   for (let element of array) {
@@ -20,12 +10,6 @@ const takeUntil = function(array, callback) {
   }
   return result;
 };
-
-// Check if the lengths of the arrays are not equal, return false
-// Iterate through each element in the arrays
-// Check if both elements are arrays and if eqArrays returns false
-// Check if the elements are not arrays and if they are not equal
-// Return true if all elements match
 
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length  !== arrayTwo.length) {
@@ -43,8 +27,6 @@ const eqArrays = function(arrayOne, arrayTwo) {
 };
 
 // Function to check if two arrays are equal and log the result
-// Function to compare two arrays and log a message indicating if the assertion passed or failed
-
 const assertArraysEqual = function(array1, array2) {
   const inspect = require('util').inspect; 
   if (eqArrays(array1, array2)) {

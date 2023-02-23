@@ -1,11 +1,4 @@
 // FUNCTION IMPLEMENTATION
-
-// Check if the lengths of the arrays are not equal, return false
-// Iterate through each element in the arrays
-// Check if both elements are arrays and if eqArrays returns false
-// Check if the elements are not arrays and if they are not equal
-// Return true if all elements match
-
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length  !== arrayTwo.length) {
     return false;
@@ -22,7 +15,6 @@ const eqArrays = function(arrayOne, arrayTwo) {
 };
 
 // Function to compare two arrays and log a message indicating if the assertion passed or failed
-
 const assertArraysEqual = function(array1, array2) {
   const inspect = require('util').inspect; 
   if (eqArrays(array1, array2)) {
@@ -33,12 +25,6 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 // Function to return an object with the positions of letters in a sentence
-// Remove spaces from the sentence
-// Loop through the sentence
-// If the letter already exists in the results object, push the index to the corresponding array
-// If the letter does not exist in the results object, create a new key-value pair with the letter as the key and the index as the value in an array
-// Return the results object
-
 const letterPositions = function(sentence) {
   let results = {};
   sentence = sentence.split("");

@@ -1,4 +1,5 @@
 const assert = require('chai').assert;
+
 // TEST CODE
 describe("#assertArraysEqual", () => {
   it("should returns true for [1, 2, 3], [1, 2, 3]", () => {

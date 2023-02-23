@@ -1,12 +1,4 @@
-
 // FUNCTION IMPLEMENTATION
-
-// Check if the lengths of the arrays are not equal, return false
-// Iterate through each element in the arrays
-// Check if both elements are arrays and if eqArrays returns false
-// Check if the elements are not arrays and if they are not equal
-// Return true if all elements match
-
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length  !== arrayTwo.length) {
     return false;
