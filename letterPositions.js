@@ -1,49 +1,62 @@
-// Function to compare two arrays and log a message indicating if the assertion passed or failed
-const assertArraysEqual = function(actual, expected) {
-  // Call the eqArrays function to compare the arrays
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// FUNCTION IMPLEMENTATION
 
-// Function to compare two arrays
-const eqArrays = function(array1, array2) {
-  // Check if the length of the arrays is not equal, return false
-  if (array1.length !== array2.length) {
+// Check if the lengths of the arrays are not equal, return false
+// Iterate through each element in the arrays
+// Check if both elements are arrays and if eqArrays returns false
+// Check if the elements are not arrays and if they are not equal
+// Return true if all elements match
+
+const eqArrays = function(arrayOne, arrayTwo) {
+  if (arrayOne.length  !== arrayTwo.length) {
     return false;
   }
-  // Loop through the elements of the arrays and compare
-  for (let i = 0; i < array1.length; i++) {
-    // If the elements are not equal, return false
-    if (array1[i] !== array2[i]) {
+  for (let i = 0; i < arrayOne.length; i++) {
+    if (Array.isArray(arrayOne[i]) && (eqArrays(arrayOne[i], arrayTwo[i]) === false)) {
+      return false;
+    }
+    if (!(Array.isArray(arrayOne[i])) && arrayOne[i] !== arrayTwo[i]){
       return false;
     }
   }
-  // If the arrays are equal, return true
-  return true;
+  return true 
 };
 
+
+// Function to compare two arrays and log a message indicating if the assertion passed or failed
+
+const assertArraysEqual = function(array1, array2) {
+  const inspect = require('util').inspect; 
+  if (eqArrays(array1, array2)) {
+    console.log(`✅✅✅✅ The following arrays are equal: ${inspect(array1)} + "===" + ${inspect(array2)}`);
+  } else {
+    console.log(`🛑🛑🛑🛑 The following arrays are not equal: ${inspect(array1)} + "!==" + ${inspect(array2)}`);
+  }
+};
+
+
+
 // Function to return an object with the positions of letters in a sentence
+// Remove spaces from the sentence
+// Loop through the sentence
+// If the letter already exists in the results object, push the index to the corresponding array
+// If the letter does not exist in the results object, create a new key-value pair with the letter as the key and the index as the value in an array
+// Return the results object
+
+
 const letterPositions = function(sentence) {
   let results = {};
-  // Remove spaces from the sentence
-  sentence = sentence.split(" ").join("");
-  // Loop through the sentence
+  sentence = sentence.split(" ").join("");  
   for (let i = 0; i < sentence.length; i++) {
-    // If the letter already exists in the results object, push the index to the corresponding array
     if (results[sentence[i]]) {
       results[sentence[i]].push(i);
     } else {
-      // If the letter does not exist in the results object, create a new key-value pair with the letter as the key and the index as the value in an array
       results[sentence[i]] = [i];
     }
   }
-  // Return the results object
   return results;
 };
 
 
 //Test Cases
 assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(letterPositions("hello").e, [2]);
