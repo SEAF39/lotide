@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@seaf39/lotide",
   "version": "1.0.2",
-  "description": "Lotide Project - Updated to version 1.0.2",
+  "description": "Lotied Project version 1.0.2",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
