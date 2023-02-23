@@ -1,27 +1,29 @@
-// Implement findKey Lotide Challenge
-// Module 1 - week2
+// FUNCTION IMPLEMENTATION
+
+// Compare the actual and expected values, and log a message to the console indicating whether they are equal or not
+
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log("✅✅✅✅ The following: Assertion Passed: " + actual + " === " + expected);
+  } else {
+    console.log("🛑🛑🛑🛑 The following: Assertion Failed: " + actual + " !== " + expected);
+  }
+};
+
+// loop over the keys of the object
+// if the callback returns a truthy value when passed the value of the current key
+// return the key
+// if no key is found, return undefined
 
 const findKey = function(obj, callback) {
-  // loop over the keys of the object
   for (let key in obj) {
-    // if the callback returns a truthy value when passed the value of the current key
     if (callback(obj[key])) {
-      // return the key
       return key;
     }
   }
-  // if no key is found, return undefined
   return undefined;
 };
 
-// Test cases using assertEqual
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 
 const obj = {
   "Blue Hill": { stars: 1 },
@@ -32,6 +34,12 @@ const obj = {
   "Akelarre":  { stars: 3 }
 };
 
-assertEqual(findKey(obj, x => x.stars === 2), "noma");
-assertEqual(findKey(obj, x => x.stars === 3), "Akaleri");
-assertEqual(findKey(obj, x => x.stars === 5), undefined);
+// TEST CASES
+
+assertEqual(findKey(obj, x => x.stars === 2), "noma"); // => true
+assertEqual(findKey(obj, x => x.stars === 3), "Akaleri"); // => true
+assertEqual(findKey(obj, x => x.stars === 5), undefined); // => true
+
+assertEqual(findKey(obj, x => x.stars === 3), "Alex"); // => false
+assertEqual(findKey(obj, x => x.stars === 3), "SEAF"); // => false
+assertEqual(findKey(obj, x => x.stars === 3), "SOSO"); // => false
